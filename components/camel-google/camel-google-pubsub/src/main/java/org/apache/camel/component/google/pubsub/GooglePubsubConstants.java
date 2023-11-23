@@ -24,6 +24,8 @@ public final class GooglePubsubConstants {
     public static final String MESSAGE_ID = "CamelGooglePubsubMessageId";
     @Metadata(label = "consumer", description = "The ID used to acknowledge the received message.", javaType = "String")
     public static final String ACK_ID = "CamelGooglePubsubMsgAckId";
+    @Metadata(label = "consumer", description = "The delivery attempt.", javaType = "String")
+    public static final String DELIVERY_ATTEMPT = "CamelGooglePubsub.DeliveryAttempt";
     @Metadata(label = "consumer", description = "The time at which the message was published",
               javaType = "com.google.protobuf.Timestamp")
     public static final String PUBLISH_TIME = "CamelGooglePubsubPublishTime";
