@@ -183,6 +183,7 @@ public class GooglePubsubConsumer extends DefaultConsumer {
                         exchange.getIn().setBody(pubsubMessage.getData().toByteArray());
 
                         exchange.getIn().setHeader(GooglePubsubConstants.ACK_ID, message.getAckId());
+                        exchange.getIn().setHeader(GooglePubsubConstants.DELIVERY_ATTEMPT, message.getDeliveryAttempt());
                         exchange.getIn().setHeader(GooglePubsubConstants.MESSAGE_ID, pubsubMessage.getMessageId());
                         exchange.getIn().setHeader(GooglePubsubConstants.PUBLISH_TIME, pubsubMessage.getPublishTime());
 
